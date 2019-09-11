@@ -1,0 +1,20 @@
+.footer {
+    color: grey;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    user-select: none;
+    text-align: center;
+}
+
+.todoform {
+    top: 500;
+    margin: auto;
+    background-color: #007bff9c;
+    width: 50%;
+}
+
+.header {
+    user-select: none;
+}

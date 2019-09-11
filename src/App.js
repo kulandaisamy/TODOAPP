@@ -1,33 +1,17 @@
-import React from 'react'
-import './style.css'
-import logo from "./list.svg";
-import Form from "./body"
+import React from "react";
+import Header from "./component/header.js";
+import Footer from "./component/Footer";
+import Todobody from "./component/todobody";
+import "./style/style.css";
 
-function Header()
-{
-    return(
-    <React.Fragment>
-    <div></div>
-    <h1 className="blinking">TODO</h1>
-    <img src= {logo} className="logo"></img>
-    </React.Fragment>
-    ) 
+function App() {
+    return (
+        <React.Fragment>
+            <Header />
+            <Footer />
+            <Todobody />
+        </React.Fragment>
+    );
 }
 
-function Footer()
-{
-    return <span className="footer">Designed by Kulandaisamy © {new Date().getFullYear()}</span>
-}
-
-function App()
-{
-return(
-<React.Fragment>
-<Header/>
-<Footer/>
-<Form/>
-</React.Fragment>
-     )
-}
-
-export default App
+export default App;
