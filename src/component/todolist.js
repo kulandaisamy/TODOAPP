@@ -1,7 +1,15 @@
 import React from "react";
+import Todoitem from "./todoitem";
 
-function Todolist(props) {
-    console.log("hai", props.todoarray);
-    return <p>hai</p>;
+class Todolist extends React.Component {
+    render() {
+        return (
+            <div>
+                {this.props.todoarray.map(item => {
+                    return <Todoitem {...item} />;
+                })}
+            </div>
+        );
+    }
 }
 export default Todolist;

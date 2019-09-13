@@ -14,7 +14,23 @@
     background-color: #007bff9c;
     width: 50%;
 }
-
 .header {
     user-select: none;
+}
+.flexible {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: "center";
+}
+.todo-item {
+    flex: 1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
 }

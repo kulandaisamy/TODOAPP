@@ -20,7 +20,6 @@ class Todoform extends React.Component {
                 let todoText = this.state.todoText;
                 let getDate = this.state.getDate.toISOString();
                 var IsSuccess = this.props.addTodoItem(todoText, getDate);
-                console.log(IsSuccess);
                 if (IsSuccess) {
                     this.setState({ getDate: "", todoText: "" });
                 } else {
@@ -52,8 +51,9 @@ class Todoform extends React.Component {
                             onChange={this.todoDateChange}
                             selected={this.state.getDate}
                             className="form-control"
+                            showTimeSelect
+                            dateFormat="MMMM d, yyyy h:mm aa"
                             placeholderText="Select Date"
-                            dateFormat="dd/MM/yyyy"
                             name="datepicker"
                             autoComplete="off"
                             todayButton="Today"
