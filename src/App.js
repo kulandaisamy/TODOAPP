@@ -1,16 +1,21 @@
 import React from "react";
 import Header from "./component/header.js";
 import Footer from "./component/Footer";
-import Todobody from "./component/todobody";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./routes";
 import "./style/style.css";
 
 function App() {
     return (
-        <React.Fragment>
-            <Header />
-            <Footer />
-            <Todobody />
-        </React.Fragment>
+        <Provider store={store}>
+            <BrowserRouter>
+                <Header />
+                <Routes />
+                <Footer />
+            </BrowserRouter>
+        </Provider>
     );
 }
 
